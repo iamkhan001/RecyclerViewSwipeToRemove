@@ -114,14 +114,18 @@ public class MainActivity extends AppCompatActivity implements RecyclerItemTouch
         });
 
 
-        if(isOnline()){
-            startAnimation();
-            viewModel.loadProfileList();
-        }else {
-            Toast.makeText(MainActivity.this,"No Internet Access!",Toast.LENGTH_LONG).show();
-        }
+        if (savedInstanceState==null){
 
-        Snackbar.make(parentView,"Swipe Down To Reload User List!",Snackbar.LENGTH_LONG).show();
+            if(isOnline()){
+                startAnimation();
+                viewModel.loadProfileList();
+            }else {
+                Toast.makeText(MainActivity.this,"No Internet Access!",Toast.LENGTH_LONG).show();
+            }
+
+            Snackbar.make(parentView,"Swipe Down To Reload User List!",Snackbar.LENGTH_LONG).show();
+
+        }
 
     }
 
