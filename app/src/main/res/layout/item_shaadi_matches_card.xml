@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true"
+    android:id="@+id/parentView"
+    android:elevation="3dp"
+    android:layout_height="@dimen/card_height"
+    android:layout_marginTop="@dimen/space_normal"
+    android:layout_marginStart="@dimen/activityPadding"
+    android:layout_marginEnd="@dimen/activityPadding">
+
+    <RelativeLayout
+        android:padding="@dimen/space_small"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <TextView
+            android:id="@+id/tvTimestamp"
+            android:layout_margin="@dimen/space_small"
+            android:maxLines="1"
+            android:textSize="@dimen/text_small"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.nstudio.shaadimatches.libraries.CircleImageView
+            android:id="@+id/imgProfile"
+            android:layout_below="@id/tvTimestamp"
+            android:layout_margin="@dimen/space_small"
+            android:layout_centerHorizontal="true"
+            app:civ_border_width="2dp"
+            android:layout_width="@dimen/profile_image"
+            android:layout_height="@dimen/profile_image" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_large"
+            android:layout_below="@id/imgProfile"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:textSize="@dimen/text_normal"
+            android:layout_below="@id/tvName"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:layout_above="@id/viewButtons"
+            android:layout_marginStart="@dimen/space_large"
+            android:layout_marginEnd="@dimen/space_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+        <LinearLayout
+            android:id="@+id/viewButtons"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/space_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvDecline"
+                android:layout_marginEnd="30dp"
+                android:drawableTop="@drawable/ic_cancel"
+                android:text="@string/decline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/tvConnect"
+                android:drawableTop="@drawable/ic_tick"
+                android:layout_marginStart="30dp"
+                android:text="@string/connect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

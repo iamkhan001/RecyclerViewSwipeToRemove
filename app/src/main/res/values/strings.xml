@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Swipe Remove Example</string>
+    <string name="decline">Decline</string>
+    <string name="connect">Connect</string>
+</resources>

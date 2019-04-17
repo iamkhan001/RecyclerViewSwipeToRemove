@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="#eee"
+    android:elevation="3dp"
+    android:layout_height="@dimen/card_height"
+    android:layout_marginTop="@dimen/space_normal"
+    android:layout_marginStart="@dimen/space_normal"
+    android:layout_marginEnd="@dimen/space_normal">
+
+    <RelativeLayout
+        android:padding="@dimen/space_small"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <View
+            android:id="@+id/imgProfile"
+            android:background="@drawable/ic_circle"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/profile_image"
+            android:layout_height="@dimen/profile_image" />
+
+
+        <View
+            android:id="@+id/tvName"
+            android:layout_marginTop="@dimen/space_large"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/imgProfile"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:background="@color/place_holder_background" />
+
+        <View
+            android:id="@+id/tvDescription"
+            android:layout_marginTop="@dimen/space_large"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tvName"
+            android:layout_width="250dp"
+            android:layout_height="20dp"
+            android:background="@color/place_holder_background" />
+
+        <View
+            android:layout_marginTop="@dimen/space_large"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tvDescription"
+            android:layout_width="250dp"
+            android:layout_height="20dp"
+            android:background="@color/place_holder_background" />
+
+        <LinearLayout
+            android:id="@+id/viewButtons"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/space_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/ic_circle"
+                android:layout_width="44dp"
+                android:layout_height="44dp" />
+
+
+            <View
+                android:layout_marginStart="30dp"
+                android:background="@drawable/ic_circle"
+                android:layout_width="44dp"
+                android:layout_height="44dp" />
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
